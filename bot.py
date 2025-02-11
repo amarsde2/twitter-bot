@@ -30,7 +30,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
-for tweet in tweepy.Cursor(api.search , q  = Query).items():
+for tweet in tweepy.Cursor(api.search , q  = query).items():
     try:
         print(f"Tweet By: {tweet.user.screen_name}")
         tweet.retweet()
